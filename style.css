@@ -4,3 +4,107 @@
 
 @media(max-width:980px){.site-header nav{display:none}.hero{grid-template-columns:1fr;padding-top:55px}.hero-media{min-height:440px}.showcase,.records,.pc-grid{grid-template-columns:1fr}.single-phone{order:-1}.section-head{grid-template-columns:1fr}.three-phones{gap:12px}.three-phones img{height:470px}.record-images{max-width:650px;width:100%;margin:auto}.premium{grid-template-columns:1fr}.pc-grid img{order:-1}}
 @media(max-width:700px){.wrap{width:min(100% - 28px,var(--max))}.site-header{height:66px;padding:0 14px}.header-actions .ghost{display:none}.logo{font-size:14px}.hero{padding-top:38px;min-height:auto}.hero h1{font-size:52px}.lede{font-size:17px}.hero-media{min-height:360px}.desktop-shot{width:96%;right:-16%;top:25px}.phone-shot{width:145px;left:0;max-height:350px}.feature-strip{font-size:10px;text-align:left}.intro{padding-top:70px}.showcase{gap:35px;padding-bottom:75px}.mini-grid{grid-template-columns:1fr}.dark-band{padding:70px 0}.three-phones{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 6px 20px}.three-phones figure{min-width:75vw;scroll-snap-align:center}.three-phones img{height:510px}.workflow{padding:75px 0}.workflow-grid{grid-template-columns:1fr}.flow-arrow{transform:rotate(90deg)}.workflow article img{height:520px}.records{gap:35px;padding:70px 0 90px}.record-images{height:560px}.record-images .detail{height:520px}.record-images .maint{height:430px}.pc-section{padding:75px 0}.premium{padding:75px 0}.premium-card,.privacy-card{padding:28px}.price{font-size:56px}footer{flex-wrap:wrap}footer span:nth-child(2){width:100%;order:3}}
+
+
+/* ===== Compact desktop sizing pass ===== */
+@media (min-width:981px){
+  :root{--max:1180px}
+  .site-header{height:62px;gap:24px}
+  .site-header nav{gap:18px}
+  .site-header nav a{font-size:13px}
+  .btn{padding:9px 14px;border-radius:8px;font-size:13px}
+  .btn.big{padding:11px 17px}
+
+  .hero{
+    min-height:500px;
+    grid-template-columns:.82fr 1.18fr;
+    gap:34px;
+    padding-top:38px;
+    padding-bottom:38px
+  }
+  .hero h1{font-size:clamp(46px,4.2vw,66px)}
+  .lede{font-size:17px;margin:18px 0}
+  .hero-points{margin-top:17px}
+  .hero-media{min-height:390px}
+  .desktop-shot{width:84%;right:0;top:4%}
+  .phone-shot{
+    width:150px;
+    left:3%;
+    bottom:-3%;
+    max-height:390px;
+    border-width:4px;
+    border-radius:24px
+  }
+
+  .feature-strip{padding:10px 18px;font-size:10px}
+  .intro{padding:68px 0 34px}
+  .intro h2,.showcase h2,.section-head h2,.records h2,
+  .pc-section h2,.premium h2,.cta h2{
+    font-size:clamp(32px,3.2vw,46px)
+  }
+  .section-lede{font-size:16px;max-width:720px}
+
+  .showcase{
+    grid-template-columns:1.1fr .62fr;
+    gap:48px;
+    padding:30px 0 72px
+  }
+  .copy>p:not(.eyebrow){font-size:16px}
+  .single-phone img{width:255px;border-radius:23px}
+  .mini-grid{gap:10px;margin-top:22px}
+  .mini-grid div{padding:14px}
+  .mini-grid span{font-size:13px}
+
+  .dark-band{padding:66px 0}
+  .section-head{gap:30px;margin-bottom:32px}
+  .section-head>p{font-size:15px}
+  .three-phones{gap:20px}
+  .three-phones img{height:420px;border-radius:22px}
+  .three-phones figcaption{padding:14px 8px}
+  .three-phones b{font-size:18px}
+  .three-phones span{font-size:13px}
+
+  .workflow{padding:72px 0}
+  .workflow-grid{grid-template-columns:1fr 40px 1fr;gap:16px}
+  .workflow article{padding:18px;border-radius:18px}
+  .workflow article img{height:430px;border-radius:20px;margin-bottom:16px}
+  .workflow article h3{font-size:21px}
+  .workflow article p{font-size:14px}
+  .flow-arrow{font-size:30px}
+
+  .records{gap:55px;padding:62px 0 88px}
+  .record-images{height:520px}
+  .record-images .detail{height:490px}
+  .record-images .maint{height:420px}
+  .checklist{margin:20px 0}
+  .checklist li{padding-top:8px;padding-bottom:8px;font-size:14px}
+
+  .pc-section{padding:68px 0}
+  .pc-grid{gap:38px}
+  .pc-grid>div>p:not(.eyebrow){font-size:16px}
+  .pc-features{margin:18px 0}
+
+  .premium{gap:18px;padding:72px 0}
+  .premium-card,.privacy-card{padding:30px;border-radius:18px}
+  .price{font-size:52px;margin:18px 0}
+  .privacy-card p{font-size:16px}
+
+  .cta{padding:65px 0 80px}
+  .cta p:not(.eyebrow){font-size:17px}
+  footer{padding-top:20px;padding-bottom:20px}
+}
+
+/* Extra compression for common laptop / 1366px-wide displays */
+@media (min-width:981px) and (max-width:1450px){
+  :root{--max:1080px}
+  .hero{min-height:455px}
+  .hero h1{font-size:52px}
+  .hero-media{min-height:350px}
+  .desktop-shot{width:82%}
+  .phone-shot{width:135px;max-height:350px}
+  .three-phones img{height:370px}
+  .workflow article img{height:380px}
+  .record-images{height:470px}
+  .record-images .detail{height:445px}
+  .record-images .maint{height:375px}
+}
