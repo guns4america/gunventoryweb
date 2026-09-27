@@ -10,7 +10,8 @@
 <body>
 <header class="site-header">
   <a href="#top" class="logo"><span class="mark">▣</span> GUNVENTORY</a>
-  <nav><a href="#features">Features</a><a href="#history">Collection History</a><a href="#workflow">Range & Cleaning</a><a href="#reports">Reports & Data</a><a href="#pc">PC Companion</a><a href="#premium">Premium</a></nav>
+  <nav id="site-nav"><a href="#features">Features</a><a href="#history">Collection History</a><a href="#workflow">Range & Cleaning</a><a href="#reports">Reports & Data</a><a href="#pc">PC Companion</a><a href="#premium">Premium</a></nav>
+  <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-controls="site-nav" aria-expanded="false"><span></span><span></span><span></span></button>
   <div class="header-actions">
     <a class="btn ghost" href="https://apps.microsoft.com/store/detail/9NG3MJ1LPPM2?cid=DevShareMCLPCS" target="_blank" rel="noopener noreferrer">PC Companion</a>
     <a class="btn" href="https://play.google.com/store/apps/details?id=com.Guns4America.gunventory2">Get the App</a>
@@ -171,4 +172,29 @@
 </main>
 
 <footer><a href="#top" class="logo"><span class="mark">▣</span> GUNVENTORY</a><span>Collection management for firearm owners.</span><a href="https://play.google.com/store/apps/details?id=com.Guns4America.gunventory2">Google Play</a></footer>
+<script>
+(() => {
+  const header = document.querySelector('.site-header');
+  const toggle = document.querySelector('.menu-toggle');
+  const nav = document.getElementById('site-nav');
+  if (!header || !toggle || !nav) return;
+  const closeMenu = () => {
+    header.classList.remove('menu-open');
+    toggle.setAttribute('aria-expanded', 'false');
+    toggle.setAttribute('aria-label', 'Open navigation menu');
+  };
+  toggle.addEventListener('click', () => {
+    const isOpen = header.classList.toggle('menu-open');
+    toggle.setAttribute('aria-expanded', String(isOpen));
+    toggle.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
+  });
+  nav.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape') { closeMenu(); toggle.focus(); }
+  });
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 980) closeMenu();
+  });
+})();
+</script>
 </body></html>
