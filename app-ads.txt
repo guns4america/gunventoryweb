@@ -142,3 +142,4 @@ seedtag.com, 674f42e4de70100007eeab9d, RESELLER
 smartadserver.com, 5791, RESELLER, 060d053dcf45cbf3
 sharethrough.com, 5791, RESELLER, 060d053dcf45cbf3
 pubmatic.com, 156500, RESELLER, 5d62403b186f2ace
+vungle.com, 6ac5d44a32a9df1341027ab5, DIRECT, c107d686becd2d77
